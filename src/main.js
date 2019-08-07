@@ -7,6 +7,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import 'mint-ui/lib/style.css';
 import './lib/mui/css/mui.min.css'
+import './lib/mui/css/icons-extra.css'
 
 import { Header } from 'mint-ui';
 Vue.component(Header.name, Header);
