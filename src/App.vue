@@ -4,8 +4,9 @@
     <mt-header fixed title="手机 APP 项目"></mt-header>
 
     <!-- content starts-->
-    <h1>{{msg}}</h1>
-    <router-view></router-view>
+	<transition>
+    	<router-view></router-view>
+	</transition>
     <!-- content ends -->
 
     <!-- footer -->
@@ -43,5 +44,20 @@ export default {
 <style lang="scss" scoped>
 .app-container{
   padding-top: 40px;
+  overflow-x: hidden;
+}
+
+.v-enter{
+	opacity: 0;
+	transform: translateX(100%);
+}
+.v-leave-to{
+	opacity: 0;
+	transform: translateX(-100%);
+	position: absolute;
+}
+.v-enter-active,
+.v-leave-active{
+	transition: all 0.5s ease;
 }
 </style>
